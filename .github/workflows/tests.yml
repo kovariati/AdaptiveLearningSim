@@ -1,0 +1,26 @@
+name: reproducibility-tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install dependencies
+        run: python -m pip install -r code/requirements-lock.txt
+      - name: Reassemble reference bundle
+        run: python raw_pipeline/reference_bundle_parts/assemble_reference_bundle.py
+      - name: Run simulator regression tests
+        run: python -m pytest -q code/test_taskenv.py
+      - name: Run EdNet preprocessor tests
+        run: python -m pytest -q raw_pipeline/01_ednet_preprocessing/tests/test_ednet_kt1_prepare.py
+      - name: Run reference-builder self-test
+        run: python raw_pipeline/02_reference_builder/ednet_kt1_build_reference.py --self-test
+      - name: Run BKT-F calibration self-test
+        run: python raw_pipeline/03_bktf_calibration/adaptivelearningsim_bktf_calibrate.py --self-test 
