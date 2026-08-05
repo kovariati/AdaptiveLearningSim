@@ -1,0 +1,10 @@
+world_model,quantile,lower_threshold,upper_threshold,reference_population_prevalence,reference_population_n,threshold_sample_n
+binary_bktf,low,-inf,0.5,0.45365,45365,100000
+binary_bktf,middle,0.5,0.6,0.34362,34362,100000
+binary_bktf,high,0.6,inf,0.20273,20273,100000
+continuous_latent_trait,low,-inf,0.5230112522432695,0.33334,33334,100000
+continuous_latent_trait,middle,0.5230112522432695,0.5512496640526293,0.33333,33333,100000
+continuous_latent_trait,high,0.5512496640526293,inf,0.33333,33333,100000
+four_state_semimarkov,low,-inf,0.5166666666666666,0.39336,39336,100000
+four_state_semimarkov,middle,0.5166666666666666,0.5666666666666667,0.33564,33564,100000
+four_state_semimarkov,high,0.5666666666666667,inf,0.271,27100,100000

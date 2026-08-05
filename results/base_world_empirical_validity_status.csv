@@ -1,0 +1,4 @@
+world_model,empirical_status,heldout_sequence_likelihood,equal_empirical_support_claimed
+binary_bktf,directly fitted to EdNet reference sequences; independent learner test metrics available,available through released BKT-F calibration pipeline,False
+continuous_latent_state_dynamical,designed moment-matched structural stress construction; not independently fitted to EdNet sequences,not estimated,False
+four_state_semimarkov,designed moment-matched structural stress construction; not independently fitted to EdNet sequences,not estimated,False

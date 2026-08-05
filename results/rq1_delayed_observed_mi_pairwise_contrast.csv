@@ -1,0 +1,4 @@
+world_model,contrast,n_independent_replications,mean_difference,simulation_interval_low,simulation_interval_high,positive_replication_fraction
+binary_bktf,maximum_response_MI_minus_two_corner,30,0.0005714666666666719,0.00020281419914288865,0.0009401191341904552,0.7
+continuous_latent_trait,maximum_response_MI_minus_two_corner,30,-1.6000000000016e-05,-0.0002326812061568195,0.0002006812061567875,0.5
+four_state_semimarkov,maximum_response_MI_minus_two_corner,30,-0.00020080000000000838,-0.0006434104723379498,0.00024181047233793297,0.5333333333333333

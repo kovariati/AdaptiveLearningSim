@@ -1,0 +1,7 @@
+reference_policy,world_model,policy,n_draws,empirical_q025,rank_low,rank_high,value_low,value_high,nominal_coverage
+blocked_median_item,binary_bktf,maximum_response_information_gain,200,0.008414583333333267,1,11,0.0044166666666666,0.0098333333333333,0.9811046153906396
+blocked_median_item,binary_bktf,two_corner_robust_response_information_gain,200,0.0084104166666666,1,11,0.0060833333333333,0.00925,0.9811046153906396
+blocked_median_item,continuous_latent_trait,maximum_response_information_gain,200,-0.00014453805569061994,1,11,-0.000723179776031,0.000250002640296,0.9811046153906396
+blocked_median_item,continuous_latent_trait,two_corner_robust_response_information_gain,200,0.0002500016034046401,1,11,-0.0004565537628706,0.0004235841393284,0.9811046153906396
+blocked_median_item,four_state_semimarkov,maximum_response_information_gain,200,0.0031944444444444,1,11,0.0015,0.0036388888888888,0.9811046153906396
+blocked_median_item,four_state_semimarkov,two_corner_robust_response_information_gain,200,0.00310347222222221,1,11,0.0011944444444444,0.0038333333333333,0.9811046153906396

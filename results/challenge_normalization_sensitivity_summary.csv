@@ -1,0 +1,9 @@
+normalization,policy,n_independent_replications,expected_benefit_mean,simulation_interval_low,simulation_interval_high,positive_replication_fraction
+empirical_frequency,blocked_median_item,5,0.0,0.0,0.0,0.0
+empirical_frequency,interleaved_median_item,5,2.7518551173211225e-05,2.666754482867809e-05,2.836955751774436e-05,1.0
+empirical_frequency,maximum_response_information_gain,5,-0.0033459148444584088,-0.003533976540195322,-0.0031578531487214956,0.0
+empirical_frequency,two_corner_robust_response_information_gain,5,-0.0026836013461452924,-0.0027633463303599654,-0.0026038563619306195,0.0
+uniform_bins,blocked_median_item,5,0.0,0.0,0.0,0.0
+uniform_bins,interleaved_median_item,5,2.1403503323647045e-05,2.1058691485559466e-05,2.1748315161734623e-05,1.0
+uniform_bins,maximum_response_information_gain,5,-0.0031167779523245454,-0.0032287597822457706,-0.0030047961224033202,0.0
+uniform_bins,two_corner_robust_response_information_gain,5,-0.0025426406432896174,-0.0027534205144803836,-0.0023318607720988513,0.0

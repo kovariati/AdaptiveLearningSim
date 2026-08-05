@@ -1,0 +1,6 @@
+parameter,n_skills,n_used_for_hyperparameter_fit,n_boundary_excluded,global_transformed_mean,between_skill_variance,guess_boundary_threshold,boundary_transformed_se_floor
+p_init,20,20,0,0.15576221389660372,0.429071709678073,,
+p_learn,20,20,0,-3.7191975594553055,0.5414244272627843,,
+slip,20,20,0,-1.0409381723904982,0.03316689146581087,,
+guess,20,9,11,-0.2287189133415408,0.017025057956360543,0.48,0.55
+lambda_per_day,20,20,0,-6.800199690254255,0.05158693932558888,,

@@ -1,0 +1,13 @@
+world_model,policy,n_schedule_cells,min_expected_benefit,max_expected_benefit,positive_cell_means,cells_interval_strictly_positive,cells_interval_strictly_negative
+binary_bktf,blocked_median_item,9,0.0,0.0,0,0,0
+binary_bktf,interleaved_median_item,9,-0.000885398217612,0.0012778947306414,5,0,0
+binary_bktf,maximum_response_information_gain,9,0.0035242301315352,0.0080314241156935,9,9,0
+binary_bktf,two_corner_robust_response_information_gain,9,0.0031247816153315,0.0057438610891716,9,9,0
+continuous_latent_trait,blocked_median_item,9,0.0,0.0,0,0,0
+continuous_latent_trait,interleaved_median_item,9,-5.073127977699432e-05,0.0004229523597565,6,6,3
+continuous_latent_trait,maximum_response_information_gain,9,-0.0008238673220131,0.0018328776844273,6,6,3
+continuous_latent_trait,two_corner_robust_response_information_gain,9,-0.0009247851296367,0.001866267397867,6,6,3
+four_state_semimarkov,blocked_median_item,9,0.0,0.0,0,0,0
+four_state_semimarkov,interleaved_median_item,9,-0.000429629168049,0.0003934282641846,5,0,0
+four_state_semimarkov,maximum_response_information_gain,9,0.0012072699036783,0.0033769927785996,9,8,0
+four_state_semimarkov,two_corner_robust_response_information_gain,9,0.0006496799921799,0.0034066442979026,9,7,0

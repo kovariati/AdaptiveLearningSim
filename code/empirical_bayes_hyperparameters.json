@@ -1,0 +1,38 @@
+{
+  "boundary_handling": {
+    "guess_boundary_threshold": 0.48,
+    "guess_boundary_transformed_se_floor": 0.55,
+    "rationale": "BKT-F guess estimates at the optimizer upper boundary have unreliable local-Hessian standard errors. They are excluded from hyperparameter estimation and down-weighted during shrinkage. This is a benchmark calibration rule, not a claim of a standard universal EB procedure."
+  },
+  "item_calibration": {
+    "continuity_correction_successes": 0.5,
+    "continuity_correction_trials": 1.0,
+    "guess_endpoint_cap": 0.47,
+    "holdout": "difficulty-stratified deterministic 20 percent by item identity within skill",
+    "item_prior_variance": "interaction-weighted variance of raw shifts minus interaction-weighted mean squared item-shift standard error",
+    "item_recentring": "interaction-times-shrinkage weighted mean raw shift"
+  },
+  "method": "normal-normal empirical-Bayes shrinkage; REML hyperparameters on transformed scale; boundary-adjacent guess fits excluded from hyperparameter estimation and assigned a pre-specified transformed-SE floor during shrinkage",
+  "parameters": {
+    "guess": {
+      "between_skill_variance": 0.017025057956360543,
+      "global_transformed_mean": -0.2287189133415408
+    },
+    "lambda_per_day": {
+      "between_skill_variance": 0.05158693932558888,
+      "global_transformed_mean": -6.800199690254255
+    },
+    "p_init": {
+      "between_skill_variance": 0.429071709678073,
+      "global_transformed_mean": 0.15576221389660372
+    },
+    "p_learn": {
+      "between_skill_variance": 0.5414244272627843,
+      "global_transformed_mean": -3.7191975594553055
+    },
+    "slip": {
+      "between_skill_variance": 0.03316689146581087,
+      "global_transformed_mean": -1.0409381723904982
+    }
+  }
+}

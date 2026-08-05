@@ -1,0 +1,49 @@
+{
+  "base_benchmark": {
+    "root_seed": 20260801,
+    "replications": 30,
+    "learners_per_policy_order_cell": 250,
+    "practice_decisions": 100,
+    "items_per_day": 5,
+    "within_day_gap_minutes": 5,
+    "curriculum_orders": 5,
+    "delayed_days": 30,
+    "sigma_learning": 0.0,
+    "sigma_forgetting": 0.35,
+    "sigma_theta": 0.70,
+    "primary_endpoint": "delayed_expected_response_score"
+  },
+  "order_replication_sensitivity": {
+    "curriculum_orders": 20,
+    "independent_replications": 20,
+    "learners_per_policy_order_cell": 200,
+    "direct_contrast": "maximum_response_MI_minus_two_corner_response_MI"
+  },
+  "challenge_grid": {
+    "target_success": [0.60, 0.70, 0.80],
+    "width": [0.12, 0.18, 0.25],
+    "floor": [0.10, 0.25, 0.50],
+    "independent_replications_per_cell": 5,
+    "learners_per_policy_order_cell": 150,
+    "curriculum_orders": 2,
+    "primary_endpoint": "delayed_expected_response_score",
+    "normalization_sensitivity": ["uniform_bins", "empirical_frequency"]
+  },
+  "practice_schedule_sensitivity": {
+    "practice_decisions": [50, 100, 200],
+    "items_per_day": [1, 5, 10],
+    "independent_replications_per_cell": 5,
+    "learners_per_policy_order_cell": 100,
+    "curriculum_orders": 2,
+    "primary_endpoint": "delayed_expected_response_score"
+  },
+  "frozen_parameter_stress": {
+    "stress_scale_main": 1.0,
+    "parameter_draws": 200,
+    "curriculum_orders": 5,
+    "monte_carlo_cohorts_per_draw_order": 3,
+    "learners_per_cohort": 40,
+    "auxiliary_stress_scales": [0.5, 1.5, 2.0],
+    "auxiliary_draws_per_scale": 20
+  }
+}

@@ -1,0 +1,4 @@
+world_model,contrast,n_independent_replications,mean_difference,simulation_interval_low,simulation_interval_high,percentage_point_difference,expected_additional_correct_per_100_items,within_0.001_indifference_band,within_0.002_indifference_band
+binary_bktf,maximum_response_MI_minus_two_corner,30,0.000428305602646332,0.00012242891282324657,0.0007341822924694175,0.0428305602646332,0.0428305602646332,True,True
+continuous_latent_trait,maximum_response_MI_minus_two_corner,30,-3.053897529608681e-05,-7.171724606250604e-05,1.0639295470332416e-05,-0.003053897529608681,-0.003053897529608681,True,True
+four_state_semimarkov,maximum_response_MI_minus_two_corner,30,-0.0001190043081681691,-0.0003722140029525159,0.00013420538661617766,-0.01190043081681691,-0.01190043081681691,True,True
