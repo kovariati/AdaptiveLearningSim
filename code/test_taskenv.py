@@ -288,7 +288,7 @@ def test_compact_reproduction_shell_smoke(tmp_path: Path) -> None:
     assert (out / "parameter_perturbation_summary.csv").exists()
 
 
-def test_empirical_bayes_input_rebuild_is_hash_exact(tmp_path: Path) -> None:
+def test_empirical_bayes_input_rebuild_matches_canonical_content(tmp_path: Path) -> None:
     import subprocess, sys
     code_dir = Path(m.__file__).resolve().parent
     source_dir = code_dir.parent / "calibration_source"
@@ -303,8 +303,17 @@ def test_empirical_bayes_input_rebuild_is_hash_exact(tmp_path: Path) -> None:
                     "--skill-fits", str(source_dir / "skill_model_fits.csv"),
                     "--selected-items", str(source_dir / "selected_items.csv"),
                     "--config", str(hjson), "--out-dir", str(tmp_path)], check=True)
-    assert m.sha256_file(tmp_path / "input_skill_parameter_shrinkage.csv") == m.sha256_file(code_dir / "input_skill_parameter_shrinkage.csv")
-    assert m.sha256_file(tmp_path / "input_item_effect_audit.csv") == m.sha256_file(code_dir / "input_item_effect_audit.csv")
+
+    # CSV byte serialization of the same floating-point values can differ across
+    # Python/pandas platforms (for example by one final printed decimal digit).
+    # Reproducibility is therefore asserted on the parsed canonical table
+    # contents, with exact values, dtypes, column order, and row order.
+    for filename in ("input_skill_parameter_shrinkage.csv", "input_item_effect_audit.csv"):
+        rebuilt = pd.read_csv(tmp_path / filename)
+        canonical = pd.read_csv(code_dir / filename)
+        pd.testing.assert_frame_equal(
+            rebuilt, canonical, check_exact=True, check_dtype=True, check_like=False
+        )
 
 
 def test_frozen_policy_contract_separates_world_and_estimator_inputs(tmp_path: Path) -> None:
@@ -515,4 +524,4 @@ def test_invalid_challenge_normalization_is_rejected(tmp_path: Path) -> None:
     cfg = m.LearningEffectConfig(mode="challenge_zone", normalization="unknown")
     import pytest
     with pytest.raises(ValueError):
-        m.calibrate_challenge_zone_power(inputs, cfg)
+        m.calibrate_challenge_zone_power(inputs, cfg) 
