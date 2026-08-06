@@ -111,7 +111,6 @@ Software citation:
 ```
 
 Associated article:
-
 > Attila Kovari. *AdaptiveLearningSim: A Reproducible Benchmark for Robust Policy Evaluation in AI-Driven Adaptive Learning*.
 
 The bibliographic details and DOI of the article should be added here after publication.
