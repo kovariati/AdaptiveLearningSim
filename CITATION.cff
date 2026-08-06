@@ -1,7 +1,6 @@
 cff-version: 1.2.0
 message: "If you use AdaptiveLearningSim, its code, benchmark protocol, or results in academic or scientific work, please cite this software and the associated article when available."
 title: "AdaptiveLearningSim"
-version: "1.0.0"
 date-released: "2026-08-05"
 authors:
   - family-names: "Kovari"
