@@ -107,7 +107,6 @@ Software citation:
   author  = {Kovari, Attila},
   title   = {AdaptiveLearningSim},
   year    = {2026},
-  version = {1.0.0}
 }
 ```
 
@@ -120,4 +119,3 @@ The bibliographic details and DOI of the article should be added here after publ
 ## License
 
 Source code is released under the MIT License. Dataset licenses remain with their original providers; see `DATA_LICENSE_NOTICE.md`.
-
