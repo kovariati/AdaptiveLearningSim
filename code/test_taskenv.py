@@ -9,7 +9,6 @@ import pytest
 
 import run_taskenv as m
 
-
 def make_inputs(tmp_path: Path, n_skills: int = 3, n_items: int = 90, p_learn: float = 0.08, lam: float = 0.01) -> m.Inputs:
     skill_rows = []
     for skill in range(1, n_skills + 1):
